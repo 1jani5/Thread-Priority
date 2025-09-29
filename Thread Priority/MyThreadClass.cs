@@ -22,7 +22,7 @@ namespace Thread_Priority
 
             }
         }
-
+        
         public static void Thread2()
         {
             for(int i = 1;i <= 6; i++)
