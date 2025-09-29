@@ -16,6 +16,8 @@ namespace Thread_Priority
         public frmTrackThread()
         {
             InitializeComponent();
+            panel1.BackColor = Color.FromArgb(100, Color.WhiteSmoke);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,15 +34,15 @@ namespace Thread_Priority
             threadC.Name = "Thread C";
             threadD.Name = "Thread D";
 
-            threadA.Priority = ThreadPriority.Highest;
-            threadB.Priority = ThreadPriority.Normal;
-            threadC.Priority = ThreadPriority.AboveNormal;
-            threadD.Priority = ThreadPriority.BelowNormal;
-
             threadA.Start();
             threadB.Start();
             threadC.Start();
             threadD.Start();
+
+            threadA.Priority = ThreadPriority.Highest;
+            threadB.Priority = ThreadPriority.Normal;
+            threadC.Priority = ThreadPriority.AboveNormal;
+            threadD.Priority = ThreadPriority.BelowNormal;
 
             threadA.Join();
             threadB.Join();
