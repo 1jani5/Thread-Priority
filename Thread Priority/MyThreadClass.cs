@@ -12,26 +12,22 @@ namespace Thread_Priority
     {
         public static void Thread1()
         {
-            for (int i = 1; i <= 2; i++)
+            for (int i = 0; i <= 2; i++)
             {
-                Console.WriteLine("Thread 1: " + i);
-                System.Threading.Thread.Sleep(500);
-
                 Thread thread = Thread.CurrentThread;
                 Console.WriteLine("Name of Thread: " + thread.Name + " = " + i);
+                System.Threading.Thread.Sleep(500);
 
             }
         }
         
         public static void Thread2()
         {
-            for(int i = 1;i <= 6; i++)
+            for(int i = 0;i <= 5; i++)
             {
-                Console.WriteLine("Thread 1: " + i);
-                System.Threading.Thread.Sleep(500);
-
                 Thread thread = Thread.CurrentThread;
                 Console.WriteLine("Name of Thread: " + thread.Name + " = " + i);
+                System.Threading.Thread.Sleep(1500);
             }
         }
     }
